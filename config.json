@@ -1,19 +1,26 @@
 {
-  "base_url": "https://wutali-nextjs-netlify-blog.netlify.app",
-  "site_title": "Next.js Netlify Blog",
-  "site_description": "Next.js blog template for Netlify",
+  "base_url": "https://sreejithofficial-blog.netlify.app/",
+  "site_title": "Sreejith's Blog",
+  "site_description": "A blog for my write-ups, ideas and workarounds.",
   "site_keywords": [
+    "MERN",
+    {
+      "keyword": "React"
+    },
     {
       "keyword": "Next.js"
     },
     {
       "keyword": "Netlify"
     },
-    {
-      "keyword": "React"
-    }
+    "Sreejith N Subramanian",
+    "Sreejith",
+    "Javascript",
+    "Typescript",
+    "Sreejith writeups",
+    "workarounds"
   ],
   "posts_per_page": 5,
-  "twitter_account": "@my-account",
-  "github_account": "wutali"
+  "twitter_account": "@sreejith_n_s",
+  "github_account": "SreejithNS"
 }
