@@ -3,7 +3,6 @@
   "site_title": "Sreejith's Blog",
   "site_description": "A blog for my write-ups, ideas and workarounds.",
   "site_keywords": [
-    "MERN",
     {
       "keyword": "React"
     },
@@ -13,12 +12,9 @@
     {
       "keyword": "Netlify"
     },
-    "Sreejith N Subramanian",
     "Sreejith",
-    "Javascript",
-    "Typescript",
-    "Sreejith writeups",
-    "workarounds"
+    "Writeups",
+    "mern"
   ],
   "posts_per_page": 5,
   "twitter_account": "@sreejith_n_s",
