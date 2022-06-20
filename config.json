@@ -1,19 +1,19 @@
 {
-	"base_url": "https://sreejithofficial-blog.netlify.app/",
-	"site_title": "Sreejith's Blog",
-	"site_description": "A blog for my write-ups, ideas and workarounds.",
-	"site_keywords": [
-		{
-			"keyword": "React"
-		},
-		{
-			"keyword": "Next.js"
-		},
-		{
-			"keyword": "Netlify"
-		}
-	],
-	"posts_per_page": 5,
-	"twitter_account": "@sreejith_n_s",
-	"github_account": "SreejithNS"
+  "base_url": "https://sreejithofficial-blog.netlify.app/",
+  "site_title": "Sreejith's Blog",
+  "site_description": "A blog for my write-ups, ideas and workarounds.",
+  "site_keywords": [
+    {
+      "keyword": "React"
+    },
+    {
+      "keyword": "Next.js"
+    },
+    {
+      "keyword": "Netlify"
+    }
+  ],
+  "posts_per_page": 5,
+  "twitter_account": "@sreejith_n_s",
+  "github_account": "SreejithNS"
 }
