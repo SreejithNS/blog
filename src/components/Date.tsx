@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import { format, formatISO } from "date-fns";
 
 type Props = {
@@ -5,15 +6,10 @@ type Props = {
 };
 export default function Date({ date }: Props) {
   return (
-    <time dateTime={formatISO(date)}>
-      <span>{format(date, "LLLL d, yyyy")}</span>
-      <style jsx>
-        {`
-          span {
-            color: #9b9b9b;
-          }
-        `}
-      </style>
-    </time>
+    <Typography variant="body2" color="text.secondary">
+      <time dateTime={formatISO(date)}>
+        <span>{format(date, "LLLL d, yyyy")}</span>
+      </time>
+    </Typography>
   );
 }

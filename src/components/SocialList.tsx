@@ -1,35 +1,18 @@
 import React from "react";
-import Twitter from "../assets/twitter-alt.svg";
-import GitHub from "../assets/github-alt.svg";
 import config from "../lib/config";
+import { ButtonBaseProps, IconButton, IconButtonProps } from "@mui/material";
+import TwitterIcon from '@mui/icons-material/Twitter';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
-export function SocialList({}) {
+export function SocialList<T>(props: T) {
   return (
     <div>
-      <a
-        title="Twitter"
-        href={`https://twitter.com/${config.twitter_account}`}
-        target="_blank"
-        rel="noopener"
-      >
-        <Twitter width={24} height={24} fill={"#222"} />
-      </a>
-      <a
-        title="GitHub"
-        href={`https://github.com/${config.github_account}`}
-        target="_blank"
-        rel="noopener"
-      >
-        <GitHub width={24} height={24} fill={"#222"} />
-      </a>
-      <style jsx>{`
-        a {
-          display: inline-block;
-        }
-        a:not(:last-child) {
-          margin-right: 2em;
-        }
-      `}</style>
+      <IconButton edge="start" {...props} title="Twitter" href={`https://twitter.com/${config.twitter_account}`} target="_blank" rel="noopener">
+        <TwitterIcon />
+      </IconButton>
+      <IconButton {...props} title="GitHub" href={`https://github.com/${config.github_account}`} target="_blank" rel="noopener">
+        <GitHubIcon />
+      </IconButton>
     </div>
   );
 }
