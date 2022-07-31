@@ -1,8 +1,15 @@
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import Layout from "../components/Layout";
 import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../components/meta/TwitterCardMeta";
-import { SocialList } from "../components/SocialList";
+import { ExpandedSocialList, SocialList } from "../components/SocialList";
+import { MainSection } from "../components/Sections";
+import ReactTypingEffect from "react-typing-effect";
+import Image from "next/image";
+import FireFlies from "../components/Backgrounds";
+import { Brand } from "../components/HeaderBar/HeaderBar";
+import style from "../components/HeaderBar/style.module.sass";
 
 export default function Index() {
   return (
@@ -10,17 +17,51 @@ export default function Index() {
       <BasicMeta url={"/"} />
       <OpenGraphMeta url={"/"} />
       <TwitterCardMeta url={"/"} />
-      <div className="container">
-        <div>
-          <h1>
-            Hi, We're Next.js & Netlify<span className="fancy">.</span>
-          </h1>
-          <span className="handle">@nextjs-netlify-blog</span>
-          <h2>A blog template with Next.js and Netlify.</h2>
-          <SocialList />
-        </div>
-      </div>
-      <style jsx>{`
+      <MainSection>
+        <FireFlies />
+        <Container sx={{ height: 'inherit' }}>
+          <Grid container justifyContent="stretch" alignItems="center" sx={{ height: "100%" }}>
+            <Grid item xs={12} textAlign="center">
+              <Box sx={
+                {
+                  //p: 0.5,
+                  px: 0.3,
+                  my: 1,
+                  //borderRadius: 8,
+                  bgcolor: "secondary.contrastText",
+                  color: "secondary.main",
+                  display: "inline-block",
+                }
+              }>
+                <Typography fontWeight="bold" variant="subtitle1">FULL STACK DEVELOPER</Typography>
+              </Box>
+              <Brand className={style["logo-text"]} my={3} fontSize={8*13}>
+                Hello I&apos;m Sreejith
+                </Brand>
+              <Typography fontWeight="normal" color="text.primary" variant="h5">
+                <ReactTypingEffect
+                  text={["solving real-world problems.","developing solutions.",  "coding for the web."]}
+                  speed={50}
+                  staticText="I love"
+                />
+              </Typography>
+              <Button sx={{ fontWeight: "bold", mt: 2 }} variant="contained" color="secondary" href="/posts">
+                Go to Blog
+              </Button>
+              <ExpandedSocialList sx={{ mt: 2 }} />
+            </Grid>
+            {/* <Grid item xs={4}>
+              <Image
+                alt="illustration"
+                width="100%"
+                height="100%"
+                src="/images/undraw_Code_typing_re_p8b9.png"
+              />
+            </Grid> */}
+          </Grid>
+        </Container>
+      </MainSection>
+      {/* <style jsx>{`
         .container {
           display: flex;
           align-items: center;
@@ -56,7 +97,7 @@ export default function Index() {
             font-size: 2.25rem;
           }
         }
-      `}</style>
-    </Layout>
+      `}</style> */}
+    </Layout >
   );
 }

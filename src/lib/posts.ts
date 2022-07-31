@@ -11,6 +11,7 @@ export type PostContent = {
   readonly slug: string;
   readonly tags?: string[];
   readonly fullPath: string;
+  readonly isLive: boolean;
 };
 
 let postCache: PostContent[];
@@ -40,6 +41,7 @@ export function fetchPostContent(): PostContent[] {
         tags: string[];
         slug: string;
         fullPath: string,
+        isLive: boolean,
       };
       matterData.fullPath = fullPath;
 
@@ -52,8 +54,13 @@ export function fetchPostContent(): PostContent[] {
         );
       }
 
+      // Assign Live status
+      if (matterData.isLive === undefined || matterData.isLive === null) {
+        matterData.isLive = true;
+      }
+
       return matterData;
-    });
+    }).filter((it) => it.isLive);
   // Sort posts by date
   postCache = allPostsData.sort((a, b) => {
     if (a.date < b.date) {

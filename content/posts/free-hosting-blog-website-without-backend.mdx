@@ -1,0 +1,45 @@
+---
+slug: free-hosting-blog-website-without-backend
+isLive: true
+title: How I hosted my blog website at zero-cost?
+date: 2022-07-31
+author: sreejith
+tags:
+  - nextjs
+  - netlify
+  - blog
+  - writeups
+  - how-tos
+  - cms
+---
+## Jamstack
+
+[Jamstack](https://jamstack.org/) is currently one of the trending architectural strategies that maximizes the utilisation of fundamental web technologies for **higher scalability and performance**. In Jamstack, it eliminates the requirement for business logic to govern the online experience by decoupling it with API's. This approach is very common for contentful websites these days.
+
+## How does it run without backend?.
+
+Mostly, Jamstack webpages are pre-rendered (or **statically generated**). This means all those contents are converted to webpages at the build step, hence removing the need for a dynamic webpage creation at request. Since it is just a hyper text content, this can be easily distributed using any Content Delivery Network ([CDN](https://jamstack.org/glossary/cdn/)).
+
+## Content Generation: The Build Step
+
+Speaking about content, there a few tools that I should shed light on prior to serving the content. As I spoke in the previous section, the content has to be converted to HTML before being served. In most cases the content are stored in Markdown format. In traditional methods, there are content management systems like [Wordpress](https://wordpress.org/), [Drupal](https://www.drupal.org/) etc. to manage the content and generating the HTML for that content. These CMS requires a backend server with or without a database for generating pages dynamically.
+
+Our case is totally different as it does not require a dynamic generation. For such cases there are [Headless CMS](https://jamstack.org/headless-cms/) available to use as APIs for Jamstacks. Strapi and Ghost are few names that are well known. There are even CMS that can produce HTML page from content as a static site generator. These static site generators are file system driver rather than API driven, which means the pages are generated at buildstep instead of generation at the time of API request.
+
+Static site generators can also be executed in local machines and the output can be pushed to a Git hosting platforms. This omits a need for a remote build environment. [Hugo](https://gohugo.io/) is one such tool that is most commonly used for static site generations.
+
+There are also hostable git-based CMS that directly communicates with the git hosting platforms, providing a clean UI for editing and managing content all without the need for a backend server. One such CMS called [Netlify CMS](https://www.netlifycms.org/), is used in creating my blog website that you are reading right now. If you are interested checkout the [GitHub Repo](https://github.com/sreejithns/blog) of this website.
+
+## Hosting at zero-cost ⚡
+
+Well that is something interesting right? But the answer is quite simple. We all know that we can host our git repositories using [GitHub](https://github.com/) (or GitLab, BitBucket etc.) . Consider this as a free-to-use public space for hosting your content. That is it!. If your code is publicly hostable for free then your content can also be hosted for free too.
+
+So now if the content is freely hostable then according to the Jamstack strategy, the website is freely hostable. In this case GitHub repository is our pseudo content provider. In addition to this GitHub also   generously provides a way to serve the hypertext contents using their [GitHub Pages](https://pages.github.com/) feature. 
+
+- - -
+
+### Coming Soon
+
+**A step by step tutorial**
+
+A complete step by step tutorial on how to create a blog website using Next.js and manage content using Netlify CMS and deploy it freely using GitHub & Netlify.

@@ -1,19 +1,22 @@
 {
-  "base_url": "https://sreejithofficial-blog.netlify.app/",
+  "base_url": "https://sreejithofficial.in",
   "site_title": "Sreejith's Blog",
-  "site_description": "A blog for my write-ups, ideas and workarounds.",
+  "site_description": "Sreejith N Subramanian is a web application developer who loves to solve real world problems using web technologies and putting the experimental web features into use in real-time scenarios. This website stands as a digital footprint for his journey in Web Technology that contains write-ups, ideas and workarounds.",
   "site_keywords": [
-    {
-      "keyword": "React"
-    },
-    {
-      "keyword": "Next.js"
-    },
-    {
-      "keyword": "Netlify"
-    }
+    "React",
+    "Next.js",
+    "Netlify",
+    "Nodejs",
+    "HTML",
+    "CSS",
+    "Javascript",
+    "Mongodb",
+    "Blog",
+    "sreejithofficial",
+    "sreejithns",
+    "sreejith"
   ],
   "posts_per_page": 5,
   "twitter_account": "@sreejith_n_s",
-  "github_account": "SreejithNS"
+  "github_account": "@SreejithNS"
 }

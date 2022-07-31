@@ -6,7 +6,7 @@ type Props = {
 };
 export default function Author({ author }: Props) {
   return (
-    <Typography variant="body2" color="text.secondary">
+    <Typography variant="body2" color="text.secondary" display="inline-block">
       {author.name}
     </Typography>
   );
